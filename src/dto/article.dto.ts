@@ -1,29 +1,30 @@
 import { Expose } from 'class-transformer';
 import { IsOptional, IsString, MinLength } from 'class-validator';
+import { ValidationGroups } from '../const';
 
 export class CreateArticleDto {
   @Expose()
-  @IsString()
-  @MinLength(4)
+  @IsString({always: true})
+  @MinLength(4, {always: true})
   name!: string;
 
   @Expose()
-  @IsString()
-  @MinLength(1)
+  @IsString({always: true})
+  @MinLength(1, {always: true})
   sectionId!: string;
 
   @Expose()
-  @IsString()
-  @MinLength(4)
+  @IsString({always: true})
+  @MinLength(4, {always: true})
   content!: string;
 
   @Expose()
-  @IsString()
-  @MinLength(1, {groups: ['BE']})
+  @IsString({always: true})
+  @MinLength(1, {groups: [ValidationGroups.BE]})
   status!: string;
 
   @Expose()
-  @IsOptional()
-  @IsString()
+  @IsOptional({always: true})
+  @IsString({always: true})
   userId?: string;
 }
