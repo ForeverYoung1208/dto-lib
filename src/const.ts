@@ -1,4 +1,4 @@
-export enum ValidationGroups {
-  BE = 'BE',
-  FE = 'FE',
+export const ValidationGroups = {
+  BE: 'BE',
+  FE: 'FE',
 }
