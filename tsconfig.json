@@ -3,6 +3,9 @@
   "include": ["src", "types"],
   "compilerOptions": {
     "module": "esnext",
-    "allowImportingTsExtensions": false
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
   }
 }
