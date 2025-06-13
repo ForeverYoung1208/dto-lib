@@ -1,6 +1,6 @@
 import { Expose } from 'class-transformer';
 import { IsOptional, IsString, MinLength } from 'class-validator';
-import { ValidationGroups } from '..';
+import { ValidationGroups } from '../const';
 
 export class CreateArticleDto {
   @Expose()
