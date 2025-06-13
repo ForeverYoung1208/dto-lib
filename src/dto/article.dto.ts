@@ -19,7 +19,7 @@ export class CreateArticleDto {
   content!: string;
 
   @Expose()
-  @IsString({always: true})
+  @IsString()
   @MinLength(1, {groups: [ValidationGroups.BE]})
   status!: string;
 
