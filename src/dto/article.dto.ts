@@ -19,7 +19,7 @@ export class CreateArticleDto {
 
   @Expose()
   @IsString()
-  @MinLength(1)
+  @MinLength(1, {groups: ['BE']})
   status!: string;
 
   @Expose()
