@@ -3,12 +3,12 @@ import { IsString, MinLength } from 'class-validator';
 
 export class CreateSectionDto {
   @Expose()
-  @IsString()
-  @MinLength(3)
+  @IsString({always: true})
+  @MinLength(3, {always: true})
   name!: string;
 
   @Expose()
-  @IsString()
-  @MinLength(3)
+  @IsString({always: true})
+  @MinLength(3, {always: true})
   status!: string;
 }
